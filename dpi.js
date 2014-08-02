@@ -21,13 +21,15 @@
     }
  
     function init() {
-        var body = document.getElementsByTagName('body')[0];
+        var body = document.getElementsByTagName('body');
 
         if (body.length === 0) {
             document.addEventListener('DOMContentLoaded', init);    
             return;
+        } else {
+            body = body[0];
         }
-
+        
         var elem = document.createElement('div');
         body.appendChild(elem);
 
